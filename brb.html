@@ -7,10 +7,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; text-rendering:optimizeLegibility; }
-html { width:1080px; height:1920px; }
-body { width:1080px; height:1920px; overflow:hidden; background:#050505; }
-.screen { width:1080px; height:1920px; background:#050505; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; flex-direction:column; font-family:'Barlow Condensed',sans-serif; }
-canvas { position:absolute; inset:0; width:1080px; height:1920px; image-rendering:crisp-edges; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:#050505; }
+.screen {
+  width:1080px;
+  height:1920px;
+  background:#050505;
+  position:absolute;
+  top:0; left:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  font-family:'Barlow Condensed',sans-serif;
+  overflow:hidden;
+}
+canvas { position:absolute; top:0; left:0; width:1080px; height:1920px; image-rendering:crisp-edges; }
 .scanlines { position:absolute; inset:0; background:repeating-linear-gradient(to bottom,transparent,transparent 3px,rgba(0,0,0,0.05) 3px,rgba(0,0,0,0.05) 4px); pointer-events:none; z-index:8; }
 .edge-top { position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(to right,transparent,#CC1010,transparent); z-index:20; }
 .edge-bottom { position:absolute; bottom:0; left:0; right:0; height:4px; background:linear-gradient(to right,transparent,#CC1010,transparent); z-index:20; }
